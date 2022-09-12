@@ -48,7 +48,7 @@ We use 'sudo' in the command only to save the binary file to your system.
 Run the following command and follow the installation instructions to install KuberLogic into your Kubernetes cluster. The KuberLogic installer will sequentially ask you for the information necessary to form the configuration file.
 
 ```shell
-./kuberlogic install
+kuberlogic install
 ```
 
 CLI will create a config file at `~/.config/kuberlogic/config.yaml` when the installation process is finished. Usually you do not have to modify this file manually, it is updated after each KuberLogic CLI installation/configuration run.
@@ -58,7 +58,7 @@ The command above can also be used to modify KuberLogic configuration parameters
 
 By entering the following command, verify that KuberLogic is up and running.
 ```shell
-./kuberlogic service list
+kuberlogic service list
 ```
 Example output:
 ```shell
