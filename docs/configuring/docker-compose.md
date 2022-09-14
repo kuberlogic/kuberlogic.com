@@ -112,49 +112,6 @@ services:
       - ./data:/data
 ```
 
-### Supported docker-compose extensions
-You can use the following extensions to your docker-compose.yml:
-
-#### `x-kuberlogic-access-http-path`
-This extension allows you to expose more than one `docker-compose` service by specifying HTTP path prefixes. Default path prefix is `/`.
-
-Duplicates are not allowed and will trigger a service provisioning error.
-
-**Will work:**
-```yml
-version: "3"
-services:
-  - name: api # This will be exposed at `/api`
-    x-kuberlogic-access-http-path: /api
-    image: my-image
-    command:
-      - "./run.sh"
-    ports:
-      - "8080:8080"
-  - name: web # This will be exposed on `/`
-    image: web
-    ports:
-      - "8080:8080"
-```
-
-**Will not work:**
-```yml
-version: "3"
-services:
-  - name: api # This will be exposed at `/api`
-    x-kuberlogic-access-http-path: /api
-    image: my-image
-    command:
-      - "./run.sh"
-    ports:
-      - "8080:8080"
-  - name: web # Duplicate HTTP path prefix!
-    x-kuberlogic-access-http-path: /api
-    image: web
-    ports:
-      - "8080:8080"
-```
-
 ### Templating `docker-compose.yml`
 KuberLogic also supports templating certain service fields in `docker-compose.yml` by using Go templates.
 
@@ -174,15 +131,16 @@ Service parameters that can be accessed in the template are:
 * `Parameters`: The advanced parameters of the service
 
 There are also a few functions that can be used for environment variables:
-* `.Endpoint`: Returns the endpoint of the service
-* `.GenerateKey <len: int,optional>`: Generate a random key of the specified length
-* `.GenerateRSAKey <bits: int,optional>`: Generate a random RSA key of the specified length
-* `PersistentSecret <id: string,optional>`: Saves the value of the field in a persistent secret that will be used by the service. (Note the absence of . at the start of the function).
+* `Endpoint`: Returns the endpoint of the service
+* `Base64`: Encodes string using Base64 algorithm
+* `GenerateKey <len: int,optional>`: Generate a random key of the specified length
+* `GenerateRSAKey <bits: int,optional>`: Generate a random RSA key of the specified length
+* `PersistentSecret <id: string,optional>`: Saves the value of the field in a persistent secret that will be used by the service.
 
 :::caution
 `Generate...` functions will generate different values each time the template is rendered. This will result in constant service restarts.
 
-You should use `PersistentSecret` function to store the generated value of the field in a persistent secret.
+You should use `PersistentSecret` function to store the generated value of the field in a persistent secret. It will never pass secret data to the next chained function.
 :::
 
 #### Examples
@@ -228,7 +186,7 @@ services:
       - SECRET_KEY={{ .GenerateKey 30 | PersistentSecret }}
 ```
 
-##### Generate a random RSA key and access it for the different service
+##### Generate a random RSA key, encode it with Base64, persist in secret and share it between different services
 RSA key will be generated and saved in a persistent secret under the "PRIVATE_RSA_KEY" key.
 ```yml
 version: "3"
@@ -240,7 +198,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SECRET_KEY={{ .GenerateRSAKey 2048 | PersistentSecret "PRIVATE_RSA_KEY" }}
+      - SECRET_KEY={{ .GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
   - name: my-service-2
     image: my-image
     command:
@@ -248,5 +206,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SECRET_KEY={{ .GenerateRSAKey 2048 | PersistentSecret "PRIVATE_RSA_KEY" }}
+      - SECRET_KEY={{ .GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
 ```
+
+### Supported docker-compose extensions
+You can use the following extensions to your docker-compose.yml:
+
+#### `x-kuberlogic-access-http-path`

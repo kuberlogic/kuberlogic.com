@@ -8,13 +8,21 @@ module.exports = {
         {
           type: 'category',
           label: 'Configuring',
-          items: ['configuring/backups', 'configuring/docker-compose', 'configuring/billing'],
+          items: [
+              'configuring/backups',
+              'configuring/docker-compose',
+              'configuring/application-access-management',
+              'configuring/application-instances-update',
+              'configuring/application-credentials-management',
+              'configuring/billing'
+          ],
         },
         {
           type: 'category',
           label: 'Using',
           items: ['using/cli_app', 'using/api_app', 'using/backups_cli'],
-        },
-    'uninstall/README', // document ID
+        }
+      'update/updating',
+      'uninstall/README', // document ID
   ],
 };

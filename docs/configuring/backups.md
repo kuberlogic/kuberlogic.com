@@ -15,6 +15,12 @@ Backups and restores are disabled by default. Follow these steps to configure en
 
 2. Install Velero for your [infrastructure provider](https://velero.io/docs/v1.9/supported-providers/). Make sure to include `--use-restic` to enable file based backups.
 
+:::tip
+
+If you're evaluating KuberLogic and do not want to use cloud resources, you can install Velero with local S3 compatible storage: [see here](https://velero.io/docs/main/contributions/minio/)
+
+:::
+
 3. Verify Velero status.
 ```shell
 velero version

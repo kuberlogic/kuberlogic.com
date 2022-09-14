@@ -6,13 +6,11 @@
 kubectl delete ns kuberlogic
 ```
 
-1. Cleanup all KuberLogic resources
+2. Cleanup all KuberLogic resources
 
 ```bash
-# delete KuberLogic backups
-kubectl delete klb --all
-# delete KuberLogicservices and restores
-kubectl delete kls,klr --all
+# delete all KuberLogic resources
+kubectl delete kuberlogic --all
 # check and delete any PVs if there any left
 kubectl get pv
 kubectl delete pv <NAME>
