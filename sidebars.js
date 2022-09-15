@@ -11,6 +11,7 @@ module.exports = {
           items: [
               'configuring/backups',
               'configuring/docker-compose',
+              'configuring/application-configuration',
               'configuring/application-access-management',
               'configuring/application-instances-update',
               'configuring/application-credentials-management',

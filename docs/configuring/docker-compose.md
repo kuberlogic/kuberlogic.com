@@ -119,6 +119,8 @@ Fields that can be templated are:
 * `image`
 * `command`
 * `environment` variables' values
+* `x-kuberlogic-file-configs` extension
+* `x-kuberlogic-secrets` extension
 
 Service parameters that can be accessed in the template are:
 * `Name`: The name of the service
@@ -135,12 +137,12 @@ There are also a few functions that can be used for environment variables:
 * `Base64`: Encodes string using Base64 algorithm
 * `GenerateKey <len: int,optional>`: Generate a random key of the specified length
 * `GenerateRSAKey <bits: int,optional>`: Generate a random RSA key of the specified length
-* `PersistentSecret <id: string,optional>`: Saves the value of the field in a persistent secret that will be used by the service.
+* `Secret <name: string>`: Retrieves a secret from an application secret storage.
 
 :::caution
 `Generate...` functions will generate different values each time the template is rendered. This will result in constant service restarts.
 
-You should use `PersistentSecret` function to store the generated value of the field in a persistent secret. It will never pass secret data to the next chained function.
+You should use `x-kuberlogic-secrets` configuration parameter to have a consistent value. See [this page](/docs/configuring/application-configuration) for more information.
 :::
 
 #### Examples
@@ -208,8 +210,3 @@ services:
     environment:
       - SECRET_KEY={{ .GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
 ```
-
-### Supported docker-compose extensions
-You can use the following extensions to your docker-compose.yml:
-
-#### `x-kuberlogic-access-http-path`
