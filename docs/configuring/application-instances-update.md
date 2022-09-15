@@ -30,7 +30,7 @@ services:
     image: demo:{{ default .Version "v1" }} # when a `version` field is not set use v1
 ```
 
-The snippet above uses Go template support for `docker-compose.yml`. To learn more see [the configuration guide](/configuring/docker-compose)
+The snippet above uses Go template support for `docker-compose.yml`. To learn more see the [configuration guide](/docs/configuring/docker-compose)
 
 Then, to change the instance version use command:
 `kuberlogic edit --id <application instance id>  --version <new version>`
