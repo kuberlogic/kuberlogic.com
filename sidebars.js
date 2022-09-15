@@ -21,7 +21,7 @@ module.exports = {
           type: 'category',
           label: 'Using',
           items: ['using/cli_app', 'using/api_app', 'using/backups_cli'],
-        }
+        },
       'update/updating',
       'uninstall/README', // document ID
   ],
