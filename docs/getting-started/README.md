@@ -58,12 +58,19 @@ The command above can also be used to modify KuberLogic configuration parameters
 
 By entering the following command, verify that KuberLogic is up and running.
 ```shell
-kuberlogic service list
+kuberlogic info
 ```
 Example output:
 ```shell
-  № | ID | SUBSCRIPTION ID | TYPE | REPLICA | VERSION | BACKUP SCHEDULE | STATUS | ENDPOINT
-----+----+-----------------+------+---------+---------+-----------------+--------+-----------
+apiserver: Ready
+chargebee-integration: Ready
+kube-rbac-proxy: Ready
+manager: Ready
+
+API server is running at http://35.238.104.40:80
+ChargeBee integration service is running at http://34.123.242.54:80
+
+Status: Ready
 ```
 
 ## Additional steps
