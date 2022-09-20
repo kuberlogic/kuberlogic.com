@@ -1,0 +1,21 @@
+---
+slug: Release 0.0.12
+title: Release notes 0.0.12
+tags: [Release notes, KuberLogic]
+---
+## Features added:
+- Add `info` command to CLI (check KuberLogic component statuses)
+
+- Add `version` command to CLI (check KuberLogic component versions)
+
+- Add `diag` command to CLI (gather information for debugging)
+
+- Installation flow improvements (interactive mode, help texts, error messages, bug fixes)
+
+- Add update-credentials capabilities for managed applications
+
+- Various ChargeBee integration fixes
+
+- Other minor bug fixes, stability improvements
+
+See the documentation at [https://kuberlogic.com/docs/intro](https://kuberlogic.com/docs/intro)
