@@ -4,10 +4,20 @@
         <title>KuberLogic Blog</title>
         <link>https://kuberlogic.com/blog</link>
         <description>KuberLogic Blog</description>
-        <lastBuildDate>Mon, 08 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 15 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release notes 0.0.13]]></title>
+            <link>https://kuberlogic.com/blog/Release 0.0.13</link>
+            <guid>Release 0.0.13</guid>
+            <pubDate>Thu, 15 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Features added:]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features-added">Features added:<a class="hash-link" href="#features-added" title="Direct link to heading">​</a></h2><ul><li><p>Support custom domains when creating/editing services (<code>--domain</code> when using CLI and <code>domain</code> field when using REST API)</p></li><li><p>Improve <code>kuberlogic install</code> command UX</p></li><li><p>Check managed applications' readiness with HTTP based <code>ReadinessProbe</code></p></li><li><p>Minor bug fixes and stability improvements</p></li></ul><p>See the documentation at <a href="https://kuberlogic.com/docs/intro" target="_blank" rel="noopener noreferrer">https://kuberlogic.com/docs/intro</a></p>]]></content:encoded>
+            <category>Release notes</category>
+            <category>KuberLogic</category>
+        </item>
         <item>
             <title><![CDATA[Release notes 0.0.11]]></title>
             <link>https://kuberlogic.com/blog/Release 0.0.11</link>
