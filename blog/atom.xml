@@ -18,6 +18,16 @@
         <category label="KuberLogic" term="KuberLogic"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Release notes 0.0.12]]></title>
+        <id>Release 0.0.12</id>
+        <link href="https://kuberlogic.com/blog/Release 0.0.12"/>
+        <updated>2022-09-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Features added:]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features-added">Features added:<a class="hash-link" href="#features-added" title="Direct link to heading">​</a></h2><ul><li><p>Add <code>info</code> command to CLI (check KuberLogic component statuses)</p></li><li><p>Add <code>version</code> command to CLI (check KuberLogic component versions)</p></li><li><p>Add <code>diag</code> command to CLI (gather information for debugging)</p></li><li><p>Installation flow improvements (interactive mode, help texts, error messages, bug fixes)</p></li><li><p>Add update-credentials capabilities for managed applications</p></li><li><p>Various ChargeBee integration fixes</p></li><li><p>Other minor bug fixes, stability improvements</p></li></ul><p>See the documentation at <a href="https://kuberlogic.com/docs/intro" target="_blank" rel="noopener noreferrer">https://kuberlogic.com/docs/intro</a></p>]]></content>
+        <category label="Release notes" term="Release notes"/>
+        <category label="KuberLogic" term="KuberLogic"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Release notes 0.0.11]]></title>
         <id>Release 0.0.11</id>
         <link href="https://kuberlogic.com/blog/Release 0.0.11"/>
