@@ -1,0 +1,16 @@
+---
+slug: Release 0.0.13
+title: Release notes 0.0.13
+tags: [Release notes, KuberLogic]
+---
+## Features added:
+
+- Support custom domains when creating/editing services (`--domain` when using CLI and `domain` field when using REST API)
+
+- Improve `kuberlogic install` command UX
+
+- Check managed applications' readiness with HTTP based `ReadinessProbe`
+
+- Minor bug fixes and stability improvements
+
+See the documentation at [https://kuberlogic.com/docs/intro](https://kuberlogic.com/docs/intro)
