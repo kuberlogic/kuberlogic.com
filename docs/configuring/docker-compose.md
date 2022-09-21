@@ -171,7 +171,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - BASE_URL={{ .Endpoint }}
+      - BASE_URL={{ Endpoint "localhost.com" }}
 ```
 
 ##### Generate a random key and save it to the persistent secret
@@ -185,7 +185,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SECRET_KEY={{ .GenerateKey 30 | PersistentSecret }}
+      - SECRET_KEY={{ GenerateKey 30 | PersistentSecret }}
 ```
 
 ##### Generate a random RSA key, encode it with Base64, persist in secret and share it between different services
@@ -200,7 +200,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SECRET_KEY={{ .GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
+      - SECRET_KEY={{ GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
   - name: my-service-2
     image: my-image
     command:
@@ -208,5 +208,5 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SECRET_KEY={{ .GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
+      - SECRET_KEY={{ GenerateRSAKey 2048 | Base64 | PersistentSecret "PRIVATE_RSA_KEY" }}
 ```
