@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkuberlogic_com=self.webpackChunkkuberlogic_com||[]).push([[8824],{2984:e=>{e.exports=JSON.parse('{"label":"KuberLogic","permalink":"/blog/tags/kuber-logic","allTagsPath":"/blog/tags","count":4}')}}]);

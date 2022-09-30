@@ -2,11 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuberlogic.com/blog</id>
     <title>KuberLogic Blog</title>
-    <updated>2022-09-15T00:00:00.000Z</updated>
+    <updated>2022-09-20T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuberlogic.com/blog"/>
     <subtitle>KuberLogic Blog</subtitle>
     <icon>https://kuberlogic.com/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Release notes 0.0.14]]></title>
+        <id>Release 0.0.14</id>
+        <link href="https://kuberlogic.com/blog/Release 0.0.14"/>
+        <updated>2022-09-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Features added:]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features-added">Features added:<a class="hash-link" href="#features-added" title="Direct link to heading">​</a></h2><ul><li>Using "insecure" mode instead of tls-enabled. It means TLS enabled by default</li></ul>]]></content>
+        <category label="Release notes" term="Release notes"/>
+        <category label="KuberLogic" term="KuberLogic"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release notes 0.0.13]]></title>
         <id>Release 0.0.13</id>

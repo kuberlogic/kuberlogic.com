@@ -4,10 +4,20 @@
         <title>KuberLogic Blog</title>
         <link>https://kuberlogic.com/blog</link>
         <description>KuberLogic Blog</description>
-        <lastBuildDate>Thu, 15 Sep 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release notes 0.0.14]]></title>
+            <link>https://kuberlogic.com/blog/Release 0.0.14</link>
+            <guid>Release 0.0.14</guid>
+            <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Features added:]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features-added">Features added:<a class="hash-link" href="#features-added" title="Direct link to heading">​</a></h2><ul><li>Using "insecure" mode instead of tls-enabled. It means TLS enabled by default</li></ul>]]></content:encoded>
+            <category>Release notes</category>
+            <category>KuberLogic</category>
+        </item>
         <item>
             <title><![CDATA[Release notes 0.0.13]]></title>
             <link>https://kuberlogic.com/blog/Release 0.0.13</link>
