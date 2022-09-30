@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Layout
       title={`Start your SaaS with ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="KuberLogic can take a containerized application and turn it into a functional SaaS offering, with integrated billing, monitoring, and customer management within days or even hours.">
       <HomepageHeader />
       <main>
     <div className="container" style={{marginTop:25, width:900}}>
