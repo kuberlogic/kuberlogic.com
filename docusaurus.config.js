@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'KuberLogic',
-  tagline: 'Turn any containerized application into cloud-native SaaS',
+  tagline: 'Turn any containerized application into a cloud-native SaaS',
   url: 'https://kuberlogic.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -74,7 +74,7 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          { href: 'https://kuberlogic.clearflask.com/', label: 'Roadmap', position: 'left' },
+          { href: 'https://roadmap.kuberlogic.com/', label: 'Roadmap', position: 'left' },
 
           {
             href: 'https://github.com/kuberlogic/kuberlogic',
