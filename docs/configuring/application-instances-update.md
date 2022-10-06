@@ -1,7 +1,7 @@
 ---
 id: application-instances-update
 title: Updating application instances
-tags: [update, application, configuration]
+tags: [update, application, configuration, docker-compose]
 ---
 Application instances update is an important part of day to day job of a SaaS offering.
 KuberLogic supports instance upgrade by providing a new version of container image and allows to accomplish this task in a several ways.

@@ -1,7 +1,7 @@
 ---
 id: application-credentials-management
 title: Providing application credentials management
-tags: [credentials, application, configuration]
+tags: [credentials, application, configuration, docker-compose]
 ---
 KuberLogic provides a possibility to manage credentials for managed applications.
 This can be useful when you want to provide a reset password form for your end user or set user credentials during the application provisioning.

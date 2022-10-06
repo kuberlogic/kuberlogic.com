@@ -1,7 +1,7 @@
 ---
 id: application-configuration
 title: Configuring managed application instances
-tags: [configuration, application, configuration]
+tags: [configuration, application, docker-compose]
 ---
 
 KuberLogic runs application in Kubernetes pods.

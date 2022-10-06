@@ -1,7 +1,7 @@
 ---
 id: application-access-management
 title: Providing application access
-tags: [ingress, application, configuration]
+tags: [ingress, application, configuration, docker-compose]
 ---
 
 Applications, provisioned by KuberLogic are exposed via Kubernetes `Ingress` objects. That means that only HTTP based applications are supported at the moment.
