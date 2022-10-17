@@ -7,6 +7,9 @@ tags:
   
 # Getting Started
 
+
+[Installation Guide Video →](https://www.youtube.com/watch?v=R-pLyKWYXIM&t=1s)
+
 ## Requirements
 * Kubernetes cluster 1.20-1.24
 

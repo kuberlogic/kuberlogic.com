@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Head from '@docusaurus/Head';
 
 import styles from './index.module.css';
 
@@ -15,6 +16,7 @@ function HomepageHeader() {
        <div className="row">
          <div className={clsx('col col--7')}>
            <img src="/img/architecture.png"/>
+           <meta property="og:image" content="/img/architecture.png" />
          </div>
          <div className={clsx('col')} style={{marginTop:100}}>
            <h1 className="hero__title">{siteConfig.tagline}</h1>
@@ -38,11 +40,15 @@ export default function Home() {
     <Layout
       title={`Start your SaaS with ${siteConfig.title}`}
       description="KuberLogic can take a containerized application and turn it into a functional SaaS offering, with integrated billing, monitoring, and customer management within days or even hours.">
+      <Head>
+        <meta property="og:image" content="/img/architecture.png" />
+        <meta name="keywords" content="kubernetes, saas, docker-compose, docker, SaaS tenancy, multi-tenancy, multi-instance, single-tenant, boilerplate, subscription, saas-boilerplate"/>
+      </Head>
       <HomepageHeader />
       <main>
-    <div className="container" style={{marginTop:25, width:900}}>
+    <div className="container" style={{marginTop:25, maxWidth:900}}>
   <h2 className="text--center">What is KuberLogic?</h2>
-  <p className="text--center" style={{fontSize:20}}>KuberLogic is a SaaS enabler for Software vendors that have a single-tenant application and helps easily turn this existing application into a Software as a Service offering. KuberLogic allows software vendors to start their SaaS journey here and now with minimal application modidication.</p>
+  <p className="text--center" style={{fontSize:20}}>KuberLogic can take a containerized application and turn it into a functional SaaS offering, with integrated billing, monitoring, and customer management within days or even hours.</p>
      </div>
             <div className="container" style={{marginTop:60}}>
   <h2 className="text--center">Features included</h2>
