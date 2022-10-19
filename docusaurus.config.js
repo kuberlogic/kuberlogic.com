@@ -62,7 +62,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-         apiKey: 'e55846c1984a25c20ca093d0b62816f7',
+         apiKey: '3f44741a8e55b4f9d804b3e3f0bf605c',
          indexName: 'kuberlogic.com',
          appId: '8ANJDQEMHP', // Optional, if you run the DocSearch crawler on your own
          ContextualSearch: true,
