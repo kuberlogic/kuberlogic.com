@@ -27,6 +27,7 @@ const config = {
     locales: ['en'],
   },
 
+
   presets: [
     [
       'classic',
@@ -60,6 +61,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+         apiKey: '3f44741a8e55b4f9d804b3e3f0bf605c',
+         indexName: 'kuberlogic.com',
+         appId: '8ANJDQEMHP', // Optional, if you run the DocSearch crawler on your own
+         ContextualSearch: true,
+      },
       navbar: {
         logo: {
           alt: 'KuberLogic Logo',
@@ -75,6 +82,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           { href: 'https://roadmap.kuberlogic.com/', label: 'Roadmap', position: 'left' },
+          { href: 'https://demosaas.app/', label: 'Demo SaaS', position: 'left' },
 
           {
             href: 'https://github.com/kuberlogic/kuberlogic',
@@ -104,6 +112,10 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Twitter',
+                href: 'https://twitter.com/KuberLogic_SaaS',
+              },
+              {
                 label: 'DEV.to',
                 href: 'https://dev.to/kuberlogic',
               },
@@ -122,7 +134,11 @@ const config = {
               },
               {
                 label: 'Roadmap',
-                href: 'https://kuberlogic.clearflask.com/',
+                href: 'https://roadmap.kuberlogic.com/',
+              },
+              {
+                label: 'Demo SaaS',
+                href: 'https://demosaas.app/',
               },
               {
                 label: 'GitHub',
