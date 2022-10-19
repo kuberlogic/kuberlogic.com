@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkuberlogic_com=self.webpackChunkkuberlogic_com||[]).push([[6945],{6945:(c,e,k)=>{k.r(e)}}]);

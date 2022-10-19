@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkuberlogic_com=self.webpackChunkkuberlogic_com||[]).push([[925],{7085:e=>{e.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);
